@@ -22,14 +22,3 @@ class InsertionSort {
         return this.array
     }
 }
-
-let arr = [4,3,2,1,5]
-let c = new InsertionSort()
-arr = c.sort(arr)
-console.log(arr)
-console.log(c.array)
-console.log(c.changes)
-console.log(c.comparisons)
-
-
-
