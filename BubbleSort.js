@@ -6,20 +6,18 @@ class BubbleSort {
     }
 
     sort(unsortedArray)  {
-        let array = unsortedArray.slice()
-        for (let i = 0; i < array.length; i++) {
-            for (let j = 0; j < array.length; j++) {
+        this.array = unsortedArray.slice()
+        for (let i = 0; i < this.array.length; i++) {
+            for (let j = 0; j < this.array.length; j++) {
                 this.comparisons++
-                if (array[j] > array[j + 1]) {
+                if (this.array[j] > this.array[j + 1]) {
                     this.changes++
-                    let aux = array[j]
-                    array[j] = array[j + 1]
-                    array[j + 1] = aux
+                    let aux = this.array[j]
+                    this.array[j] = this.array[j + 1]
+                    this.array[j + 1] = aux
                 }
             }
         }
-        this.array = array
+        return this.array
     }
 }
-
-module.exports = BubbleSort
